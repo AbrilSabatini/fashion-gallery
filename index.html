@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Gallery</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <meta property="og:title" content="Fashion Gallery">
+    <meta property="og:image" content="img/star-four-points.png">
+
+    <link rel="icon" type="image/jpg" href="img/star-four-points.png">
+
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">Fashion<span>gallery</span></div>
+    </header>
+
+    <main>
+      <section class="upload-section">
+        <div class="section-label">New Upload</div>
+        <div class="drop-zone" id="drop-zone">
+          <span class="drop-icon">✦</span>
+          <div class="drop-text">
+            <strong>Drop images here</strong><br />
+            or click to select files<br />
+            JPG, PNG, WEBP — multiple files supported
+          </div>
+        </div>
+        <input type="file" id="file-input" accept="image/*" multiple />
+      </section>
+
+      <section class="staging-section" id="staging-section">
+        <div class="section-label">
+          Review — <span id="staging-count">0</span> selected
+        </div>
+        <div class="staging-grid" id="staging-grid"></div>
+        <div class="actions">
+          <button class="btn btn-primary" id="save-btn">Save to archive</button>
+          <button class="btn btn-ghost" id="clear-btn">Clear all</button>
+          <div class="upload-progress" id="upload-progress">
+            <div class="progress-bar-wrap">
+              <div class="progress-bar"></div>
+            </div>
+            <span>Saving...</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section class="gallery-section">
+        <div class="gallery-header">
+          <div class="section-label" style="margin-bottom:0; flex:1">Archive</div>
+          <div class="gallery-count" id="gallery-count"></div>
+        </div>
+        <div class="gallery-grid" id="gallery-grid">
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+        </div>
+      </section>
+    </main>
+
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightbox-close">✕ close</button>
+      <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    </div>
+
+    <div class="toast-container" id="toast-container"></div>
+
+    <footer>
+      <div class="footer-text">© Fashion Archive</div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
