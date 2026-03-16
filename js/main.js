@@ -5,7 +5,7 @@ const CONFIG = {
     API: 'http://localhost:8080/api/images'
   },
   production: {
-    API: 'https://fashion-gallery-api-1.onrender.com'
+    API: 'https://fashion-gallery-api-1.onrender.com/images'
   }
 };
 
